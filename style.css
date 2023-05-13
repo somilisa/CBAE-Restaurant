@@ -10,6 +10,10 @@ header {
   margin-bottom: 25px;
 }
 
+main {
+  padding-bottom: 60px;
+}
+
 .banner {
   height: 500px;
   background-image: url(Banner.jpg);
@@ -20,12 +24,18 @@ header {
 }
 
 .container {
-  width: 1200;
-  max-width: 80%;
+  width: 1200px;
+  max-width: 100%;
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+}
+
+@media screen and (max-width: 540px) {
+  .container {
+    padding: 0px;
+  }
 }
 
 .section {
@@ -41,8 +51,9 @@ header {
   /* font-family: 'Fjalla One', sans-serif; */
   font-weight: 700;
   font-size: 36px;
-  letter-spacing: 8;
+  letter-spacing: 2;
   margin: 10px 0;
+  text-transform: uppercase;
 }
 
 .section-1 {
@@ -61,19 +72,45 @@ header {
 
 .container li {
   list-style-type: none;
-  width: 50%;
   display: inherit;
-  justify-content: space-between;
-  padding: 0 15px 15px 15px;
+  flex-direction: column;
+  padding: 0 15px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
 }
 
-.container li h3 {
-  text-transform: uppercase;
+@media (max-width: 860px) {
+  .container li {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .container li {
+    width: 50%;
+  }
+}
+
+.container li p {
   /* font-family: 'Fjalla One', sans-serif; */
-  font-weight: 600;
   /*
   font-size: 24px;
   line-height: 26.4px; */
+}
+
+.menu-item {
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  display: inherit;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.item-description {
+  font-weight: 200;
+  font-size: 12px;
+  width: 80%;
 }
 
 .content {
@@ -88,4 +125,25 @@ article {
   min-width: 50%;
   padding-left: 15px;
   padding-right: 15px;
+}
+
+footer {
+  background-color: black;
+  text-align: center;
+  padding: 12px 20px;
+  margin-bottom: 0;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+}
+
+footer a:visited {
+  text-decoration: none;
+  color: white;
 }
