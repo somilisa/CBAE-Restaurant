@@ -90,13 +90,6 @@ main {
   }
 }
 
-.container li p {
-  /* font-family: 'Fjalla One', sans-serif; */
-  /*
-  font-size: 24px;
-  line-height: 26.4px; */
-}
-
 .menu-item {
   font-weight: 600;
   text-transform: uppercase;
@@ -112,6 +105,7 @@ main {
   font-size: 14px;
   width: 80%;
   text-transform: capitalize;
+  line-height: 1.2;
 }
 
 .content {
@@ -124,6 +118,7 @@ main {
 
 article {
   min-width: 50%;
+  display: none;
 }
 
 footer {
